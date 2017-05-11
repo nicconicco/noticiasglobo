@@ -7,5 +7,79 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/branco</item>
+    </style>
+    <style name="GreenScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="ViewAlphaTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/branco</item>
+        <item name="colorControlNormal">#009248</item>
+        <item name="colorControlActivated">@color/branco</item>
+    </style>
+
+    <style name="FormDarkTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/branco</item>
+        <item name="colorControlActivated">@color/branco</item>
+    </style>
+
+    <style name="MyEditTextTheme">
+        <!-- Used for the bottom line when not selected / focused -->
+        <item name="colorControlNormal">@color/branco</item>
+        <item name="colorControlActivated">@color/branco</item>
+        <item name="colorControlHighlight">@color/branco</item>
+        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
+    </style>
+
+    <style name="EditTextDarkStyle" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="ViewLineTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/branco</item>
+        <item name="colorControlNormal">#009248</item>
+        <item name="colorControlActivated">@color/branco</item>
+    </style>
+
+    <style name="EditTextSelectLine" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionOverflowButtonStyle">@style/CustomToolbarStyle.OverFlow</item>
+    </style>
+
+    <style name="CustomToolbarStyle.OverFlow">
+    </style>
+
+    <style name="NavDrawerTextStyle" parent="Base.TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/menu_lateral</item>
+    </style>
+
+
+    <style name="verticalTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/preto</item>
+    </style>
 
 </resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_economia"
+            android:title="@string/Economia" />
+        <item
+            android:id="@+id/nav_brasil"
+            android:title="@string/brasil" />
+        <item
+            android:id="@+id/nav_sociedade"
+            android:title="@string/sociedade" />
+        <item
+            android:id="@+id/nav_mundo"
+            android:title="@string/mundo" />
+        <item
+            android:id="@+id/nav_defesa"
+            android:title="@string/defesa" />
+    </group>
+</menu>

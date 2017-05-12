@@ -98,20 +98,21 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
         switch (id) {
-            case R.id.nav_brasil:
-                showFragment(ft);
-            case R.id.nav_defesa:
+            case R.id.nav_noticias:
                 showFragment(ft);
                 break;
-            case R.id.nav_sociedade:
-                showFragment(ft);
-                break;
-            case R.id.nav_mundo:
-                showFragment(ft);
-                break;
-            case R.id.nav_economia:
-                showFragment(ft);
-                break;
+//            case R.id.nav_defesa:
+//                showFragment(ft);
+//                break;
+//            case R.id.nav_sociedade:
+//                showFragment(ft);
+//                break;
+//            case R.id.nav_mundo:
+//                showFragment(ft);
+//                break;
+//            case R.id.nav_economia:
+//                showFragment(ft);
+//                break;
             case R.id.nav_logout:
                 AlertUtils.alertConfirm(this, R.string.deseja_realmente_sair, R.string.sair, R.string.cancelar, new Runnable() {
                     @Override
@@ -128,6 +129,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
         return true;
     }
+
 
     private void showFragment(FragmentTransaction ft) {
         NoticiasFragment frc = new NoticiasFragment();

@@ -2,6 +2,7 @@ package noticias.globo.com.br.noticiasglobo;
 
 import android.os.Bundle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.livetouch.BaseApplication;
@@ -19,7 +20,7 @@ public class NoticiasGloboApplication extends BaseApplication{
         return (NoticiasGloboApplication) BaseApplication.getInstance();
     }
 
-    private List<Noticia> noticias;
+    private List<Noticia> noticias = new ArrayList<>();
 
     public void setNoticias(List<Noticia> noticias) {
         this.noticias = noticias;

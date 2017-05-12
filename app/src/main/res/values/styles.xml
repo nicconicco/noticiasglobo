@@ -57,14 +57,21 @@
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="CustomToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <style name="CustomToolbarStyle" parent="ThemeOverlay.AppCompat.Light">
         <item name="actionOverflowButtonStyle">@style/CustomToolbarStyle.OverFlow</item>
     </style>
 

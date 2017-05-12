@@ -30,6 +30,7 @@
             app:itemTextColor="@drawable/selector_color_selected"
             app:itemBackground="@drawable/selector_nav_backgorund"
             app:menu="@menu/menu_navigation_drawer"
+            app:itemIconTint="@android:color/white"
             android:layout_marginBottom="50dp"/>
 
         <android.support.design.widget.NavigationView

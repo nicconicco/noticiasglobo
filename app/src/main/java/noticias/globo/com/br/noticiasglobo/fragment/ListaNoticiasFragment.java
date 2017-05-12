@@ -41,8 +41,15 @@ public class ListaNoticiasFragment extends BaseFragment{
     @Override
     public void onResume() {
         super.onResume();
-        Task task = taskGetNoticias();
-        startTask(task);
+
+        if (NoticiasGloboApplication.getInstance().getNoticias() == null ||
+                NoticiasGloboApplication.getInstance().getNoticias().size() == 0) {
+            Task task = taskGetNoticias();
+            startTask(task);
+        } else {
+            noticias = NoticiasGloboApplication.getInstance().getNoticias();
+            constroiListaNoticias();
+        }
     }
 
     private Task taskGetNoticias() {
@@ -50,17 +57,22 @@ public class ListaNoticiasFragment extends BaseFragment{
             @Override
             public void execute() throws Exception {
                 noticias = GloboService.getNoticiasJson();
+                noticias.remove(0);
             }
 
             @Override
             public void updateView() {
                 if (noticias != null && noticias.size() > 0) {
                     NoticiasGloboApplication.getInstance().setNoticias(noticias);
-                    mAdapter =  new NoticiasAdapter(getContext(), noticias, onClickListener());
-                    recycler.setAdapter(mAdapter);
+                    constroiListaNoticias();
                 }
             }
         };
+    }
+
+    private void constroiListaNoticias() {
+        mAdapter =  new NoticiasAdapter(getContext(), noticias, onClickListener());
+        recycler.setAdapter(mAdapter);
     }
 
     private NoticiasAdapter.OnClickListener onClickListener() {
